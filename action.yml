@@ -1,4 +1,4 @@
-name: 'Echo'
+name: 'sambaiz-test-docker-github-action'
 description: 'Echo your word'
 inputs:
   i-say:
