@@ -1,12 +1,13 @@
-description: 'Echo your word'
+name: 'Echo JSON'
+description: 'Echo your json'
 inputs:
   i-say:
     description: 'What do you say?'
     required: true
-    default: '(silence)'
+    default: '{}'
 outputs:
-  return-word:
-    description: 'some number'
+  return-json:
+    description: 'return json you said'
 runs:
   using: 'docker'
   image: 'Dockerfile'

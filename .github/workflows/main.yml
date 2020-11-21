@@ -3,14 +3,14 @@ on: [push]
 jobs:
   echo-job:
     runs-on: ubuntu-latest
-    name: run-echo-action
+    name: run-local-action
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Local echo action
+      - name: run
         uses: ./
-        id: echo-action
+        id: echo-json-action
         with:
-          i-say: 'yahho'
-      - name: Show return word
-        run: echo "Returned ${{ steps.echo-action.outputs.return-word }}"
+          i-say: '{"a": 1234}'
+      - name: Show return-json
+        run: echo "Returned ${{ steps.echo-json-action.outputs.return-json }}"
