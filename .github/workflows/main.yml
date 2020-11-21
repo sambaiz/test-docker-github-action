@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  echo-job:
+    runs-on: ubuntu-latest
+    name: run-echo-action
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Local echo action
+        uses: ./
+        id: echo-action
+        with:
+          i-say: 'yahho'
+      - name: Show return word
+        run: echo "The time was ${{ steps.echo-action.outputs.return-word }}"
