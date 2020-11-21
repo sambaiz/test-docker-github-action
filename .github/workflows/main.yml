@@ -13,4 +13,4 @@ jobs:
         with:
           i-say: 'yahho'
       - name: Show return word
-        run: echo "The time was ${{ steps.echo-action.outputs.return-word }}"
+        run: echo "Returned ${{ steps.echo-action.outputs.return-word }}"

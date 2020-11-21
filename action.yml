@@ -1,6 +1,6 @@
 description: 'Echo your word'
 inputs:
-  your-word:
+  i-say:
     description: 'What do you say?'
     required: true
     default: '(silence)'
@@ -11,4 +11,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.your-word }}
+    - ${{ inputs.i-say }}
